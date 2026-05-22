@@ -1,8 +1,8 @@
 :root {
-    --cor-primaria: #2B9EA3;
-    --cor-segundaria: #BACE39;
-    --cor-destaque1: #312A18;
-    --cor-destaque2: #FEB300;
+    --cor-primaria: #2b9ea3;
+    --cor-segundaria: #bace39;
+    --cor-destaque1: #312a18;
+    --cor-destaque2: #feb300;
     --fonte-titulo: "Times New Romam", "Geogia", serif;
     --fonte-boy: Arial, Helvetica, sans-serif;
 }
@@ -18,18 +18,24 @@ body {
     color: var(--cor-segundaria);
 }
 
-header, main, footer {
+header,
+main,
+footer {
     width: 840px;
     margin: 0 auto;
 }
 
-h1, h2 {
+h1,
+h2 {
     font-family: var(--fonte-titulo);
     color: var(--cor-primaria);
     text-align: center;
 }
 
-nav, p, section, article {
+nav,
+p,
+section,
+article {
     margin: 16px;
     padding: 8px;
 }

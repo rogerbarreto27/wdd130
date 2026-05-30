@@ -29,6 +29,7 @@ header {
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
 }
 
 h1,
@@ -55,8 +56,9 @@ section {
 footer {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
 }
+
 .redes-sociais a {
     text-decoration: none;
 }

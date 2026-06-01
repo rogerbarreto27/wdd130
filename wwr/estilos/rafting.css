@@ -72,6 +72,10 @@ footer {
     text-decoration: none;
 }
 
+nav a {
+    color: #1f6f73;
+}
+
 .hero {
     position: relative;
 }

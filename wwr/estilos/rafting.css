@@ -26,10 +26,10 @@ footer {
 }
 
 header {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+    display: grid;
+    grid-auto-flow: column;
     justify-content: center;
+    align-items: center;
 }
 
 h1,
@@ -45,6 +45,11 @@ section,
 article {
     margin: 16px;
     padding: 8px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
 }
 
 section {

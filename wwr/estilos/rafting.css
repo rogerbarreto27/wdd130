@@ -1,17 +1,30 @@
+/* ==================================================
+   VARIÁVEIS
+================================================== */
+
 :root {
     --cor-primaria: #1f6f73;
     --cor-segundaria: #556b1f;
     --cor-destaque1: #312a18;
     --cor-destaque2: #8a5a00;
+
     --fonte-titulo: "Times New Roman", Georgia, serif;
     --fonte-body: Arial, Helvetica, sans-serif;
 }
+
+/* ==================================================
+   RESET
+================================================== */
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+/* ==================================================
+   ESTILOS GERAIS
+================================================== */
 
 body {
     font-family: var(--fonte-body);
@@ -25,13 +38,6 @@ footer {
     margin: 0 auto;
 }
 
-header {
-    display: grid;
-    grid-auto-flow: column;
-    justify-content: center;
-    align-items: center;
-}
-
 h1,
 h2 {
     font-family: var(--fonte-titulo);
@@ -43,7 +49,7 @@ nav,
 p,
 section,
 article {
-    margin: 16px;
+    margin: 6px;
     padding: 8px;
 }
 
@@ -52,29 +58,62 @@ nav {
     justify-content: center;
 }
 
+nav a {
+    color: var(--cor-primaria);
+    text-decoration: none;
+    margin-left: 25px;
+}
+
 section {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+/* ==================================================
+   HEADER
+================================================== */
+
+header {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ==================================================
+   FOOTER
+================================================== */
+
 footer {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
+    padding: 20px;
+}
+
+.redes-sociais {
+    display: flex;
+    gap: 15px;
 }
 
 .redes-sociais a {
     text-decoration: none;
 }
 
-.socialmedia a {
-    text-decoration: none;
+.redes-sociais img {
+    width: 35px;
+    height: 35px;
 }
 
-nav a {
-    color: #1f6f73;
+.logo-footer {
+    width: 42px;
+    height: 42px;
 }
+
+/* ==================================================
+   ABOUT US
+================================================== */
 
 .hero {
     position: relative;
@@ -90,17 +129,11 @@ nav a {
     position: absolute;
     top: 20px;
     width: 100%;
-
     padding: 16px;
     text-align: center;
-    opacity: 0.7;
     background-color: var(--cor-destaque1);
-    color: #fff;
-}
-
-.hero article img {
-    float: right;
-    width: 145px;
+    color: white;
+    opacity: 0.7;
 }
 
 .hero article {
@@ -109,21 +142,102 @@ nav a {
     width: 808px;
     padding: 16px;
     text-align: center;
-    opacity: 0.7;
     background-color: var(--cor-destaque2);
-    color: #fff;
+    color: white;
+    opacity: 0.7;
 }
 
-.logo-footer {
-    width: 42px;
-    height: 42px;
+.hero article img {
+    float: right;
+    width: 145px;
 }
 
-a {
-    margin-left: 25px;
+/* ==================================================
+   HOME PAGE
+================================================== */
+
+.hero-principal {
+    position: relative;
 }
 
-/* ===== Página de Contato ===== */
+.hero-principal img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.hero-principal h1 {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    padding: 16px;
+    text-align: center;
+    background-color: var(--cor-destaque1);
+    color: white;
+    opacity: 0.7;
+}
+
+.hero-principal article {
+    position: absolute;
+    bottom: 20px;
+    width: 808px;
+    padding: 16px;
+    text-align: center;
+    background-color: var(--cor-destaque2);
+    color: white;
+    opacity: 0.7;
+}
+
+.hero-principal article img {
+    float: right;
+    width: 145px;
+}
+
+.atividades {
+    text-align: center;
+    display: block;
+}
+
+.atividades figure {
+    display: inline-block;
+    width: 220px;
+    margin: 15px;
+    vertical-align: top;
+}
+
+.atividades img {
+    width: 230px;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 3px solid var(--cor-destaque1);
+}
+
+.aventura {
+    position: relative;
+    width: 100%;
+}
+
+.aventura img {
+    width: 100%;
+    height: auto;
+}
+
+.aventura-texto {
+    position: absolute;
+    top: 115px;
+    left: 25px;
+    right: 290px;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: var(--cor-destaque1);
+    color: white;
+    opacity: 0.6;
+}
+
+/* ==================================================
+   CONTACT PAGE
+================================================== */
 
 .contact-info {
     text-align: center;
@@ -132,16 +246,16 @@ a {
     padding: 20px;
 }
 
-.logo {
-    width: 50px;
-}
-
 .contact-info h1 {
     color: var(--cor-destaque1);
 }
 
 .contact-info p {
     margin: 10px 0;
+}
+
+.logo {
+    width: 50px;
 }
 
 .mapa iframe {
@@ -205,11 +319,6 @@ a {
     resize: vertical;
 }
 
-.contato-formulario input[type="radio"],
-.contato-formulario input[type="checkbox"] {
-    margin-right: 8px;
-}
-
 .contato-formulario button {
     background-color: var(--cor-destaque1);
     color: white;
@@ -224,156 +333,162 @@ a {
     background-color: var(--cor-destaque2);
 }
 
-/* ===== Página Principal ===== */
+/* ==================================================
+   TRIPS PAGE
+================================================== */
 
-body {
-    font-family: var(--fonte-body);
-    color: var(--cor-segundaria);
-}
-
-header,
-main,
-footer {
-    width: 840px;
-    margin: 0 auto;
-}
-
-header {
-    display: grid;
-    grid-auto-flow: column;
-    justify-content: center;
-    align-items: center;
-}
-
-h1,
-h2 {
-    font-family: var(--fonte-titulo);
-    color: var(--cor-primaria);
-    text-align: center;
-}
-
-nav,
-p,
-section,
-article {
-    margin: 16px;
-    padding: 8px;
-}
-
-nav {
-    display: flex;
-    justify-content: center;
-}
-
-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-footer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.redes-sociais a {
-    text-decoration: none;
-}
-
-.socialmedia a {
-    text-decoration: none;
-}
-
-nav a {
-    color: #1f6f73;
-}
-
-.hero-principal {
+.trips-hero {
     position: relative;
+    margin-bottom: 40px;
 }
 
-.hero-principal img {
-    display: block;
+.trips-hero img {
     width: 100%;
-    height: auto;
-}
-
-.hero-principal h1 {
-    position: absolute;
-    top: 20px;
-    width: 100%;
-
-    padding: 16px;
-    text-align: center;
-    opacity: 0.7;
-    background-color: var(--cor-destaque1);
-    color: #fff;
-}
-
-.hero-principal article img {
-    float: right;
-    width: 145px;
-}
-
-.hero-principal article {
-    position: absolute;
-    bottom: 20px;
-    width: 808px;
-    padding: 16px;
-    text-align: center;
-    opacity: 0.7;
-    background-color: var(--cor-destaque2);
-    color: #fff;
-}
-
-.logo-footer {
-    width: 42px;
-    height: 42px;
-}
-
-a {
-    margin-left: 25px;
-}
-
-.atividades {
-    text-align: center;
-    display: block;
-}
-
-.atividades figure {
-    display: inline-block;
-    width: 220px;
-    margin: 15px;
-    vertical-align: top;
-}
-
-.atividades img {
-    width: 230px;
-    height: 230px;
+    height: 500px;
     object-fit: cover;
-    border-radius: 10px;
-    border: 3px solid var(--cor-destaque1);
+    display: block;
 }
 
-.aventura {
-    position: relative;
-    width: 100%;
-}
-
-.aventura img {
-    width: 100%;
-    height: auto;
-}
-
-.aventura-texto {
+.hero-text {
     position: absolute;
-    top: 25px;
-    left: 25px;
-    right: 290px;
-    padding: 5px;
-    background-color: var(--cor-destaque1);
-    color: #fff;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 15px;
     border-radius: 10px;
-    opacity: 0.6;
+    max-width: 700px;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 5px;
+    background-color: var(--cor-destaque1);
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.trip-grid {
+    width: 840px;
+    margin: 40px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.trip-card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.trip-card:hover {
+    transform: translateY(-8px);
+}
+
+.trip-card img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+}
+
+.trip-content {
+    padding: 20px;
+}
+
+.trip-content h2 {
+    margin-bottom: 15px;
+}
+
+.trip-content p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.trip-content ul {
+    padding-left: 20px;
+}
+
+/* ==================================================
+   TABELA DE PASSEIOS
+================================================== */
+
+.trip-table {
+    width: 840px;
+    margin: 40px auto;
+}
+
+.trip-table h2 {
+    margin-bottom: 25px;
+}
+
+.trip-table table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+}
+
+.trip-table th {
+    background-color: var(--cor-destaque1);
+    color: white;
+    padding: 15px;
+}
+
+.trip-table td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.trip-table tr:nth-child(even) {
+    background-color: #f5f5f5;
+}
+
+.trip-table tr:hover {
+    background-color: #e8e8e8;
+}
+
+/* ==================================================
+   RESPONSIVO
+================================================== */
+
+@media (max-width: 850px) {
+    header,
+    main,
+    footer,
+    .trip-grid,
+    .trip-table {
+        width: 100%;
+    }
+
+    .hero-text {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+
+    .trip-table {
+        overflow-x: auto;
+    }
 }
